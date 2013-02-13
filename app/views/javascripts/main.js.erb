@@ -1,11 +1,16 @@
 
-if(typeof document.addEventListener  == 'undefined'){
-  // Fix for IE8
-  document.attachEvent("onload", load);  
-}
-else{
-  document.addEventListener("DOMContentLoaded", load, false);
-}
+// if(typeof document.addEventListener  == 'undefined'){
+//   // Fix for IE8
+//   document.attachEvent("onload", load);  
+// }
+// else{
+//   document.addEventListener("DOMContentLoaded", load, false);
+// }
+$(document).ready(function() {
+    //DOM has loaded, put your code here
+    load();
+});
+
 
 function load() {
 
