@@ -1,5 +1,11 @@
 
-document.addEventListener("DOMContentLoaded", load, false);
+if(document.addEventListener typeof 'function'){
+  document.addEventListener("DOMContentLoaded", load, false);
+}
+else{
+  // Fix for IE8
+  document.attachEvent("onload", load, false);  
+}
 
 function load() {
 
