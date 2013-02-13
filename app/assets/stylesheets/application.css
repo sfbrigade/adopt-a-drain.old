@@ -10,4 +10,5 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap/1.4.0/bootstrap.min.css
 */
