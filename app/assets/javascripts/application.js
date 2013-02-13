@@ -11,6 +11,3 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require_tree .
-//= require bootstrap/1.4.0/bootstrap-twipsy.js
-//= require bootstrap/1.4.0/bootstrap-alerts.js
-//= require bootstrap/1.4.0/bootstrap-modal.js
