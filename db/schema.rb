@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(:version => 20130225055407) do
     t.string   "state"
     t.string   "zip"
     t.datetime "reset_password_sent_at"
-    t.datetime "last_adoption_at"
+    t.datetime "subscribed_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
