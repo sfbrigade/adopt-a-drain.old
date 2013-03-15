@@ -29,7 +29,7 @@ task :subscribe_recent_adopters, [:host, :api_key] => :environment do |t, args|
 	User.find_by_sql(sql).each do |user|
 		request_path = "/api/add_script_subscription?t=#{topic_id}&k=#{api_key}&e=#{user.email}"
 		uri = api_root + request_path
-		Rails.logger.info "Attempting to subscribe #{user.email}"
+		Rails.logger.info "Attempting to subscribe #{user.email} with the following URL #{request_path}"
 		begin
 			response = HTTParty.get(uri)
 			Rails.logger.info response.body
