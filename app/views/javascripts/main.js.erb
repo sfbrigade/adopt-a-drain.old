@@ -9,6 +9,15 @@
 $(document).ready(function() {
     //DOM has loaded, put your code here
     load();
+
+    $('#tos_link').click(function(){
+      // console.log('hide');
+      $('#tos').addClass('hide').addClass('fade');
+    }, function(){
+      // console.log('show');
+      $('#tos').removeClass('hide').removeClass('fade');
+    });
+
 });
 
 
