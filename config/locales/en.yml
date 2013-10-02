@@ -32,7 +32,7 @@ en:
     thing: "storm drain"
     this_thing: "This %{thing}"
     tagline: "Volunteer to keep a storm drain clear and report any problems!"
-    tos: "By signing up, you agree to the %{tos}."
+    tos: "By signing up you agree to the %{tos}."
     voice_number: "510-555-1212"
     zip: "94612"
   errors:
@@ -81,8 +81,7 @@ en:
     ofline: "of %{organization}"
     sign_in: "Sign in to adopt this %{thing}"
     thank_you: "Thank you for adopting this %{thing}!"
-    tos: "Terms of Service"
-    thanks_for_feedback: "Thanks for the feedback"
+    tos: "Terms of Service & Volunteer Guidelines"
   sponsors:
     cfa: "Code for America"
     city: "City of Oakland"

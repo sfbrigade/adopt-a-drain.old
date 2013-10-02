@@ -40,10 +40,15 @@
         %small
           = image_tag "lock.png", :class => "lock", :alt => t("captions.private"), :title => t("captions.private")
       = f.password_field "password_confirmation"
+      
+    %p
+    
+      =check_box_tag :tos_agreement, :disabled => true
+
+      = t("defaults.tos", :tos => link_to(t("titles.tos"), "#tos", :id => "tos_link", "data-target"=>"#tos", "data-toggle"=>"modal")).html_safe
+
     %fieldset.form-actions
       = f.submit t("buttons.sign_up"), :class => "btn primary"
-    %p
-      = t("defaults.tos", :tos => link_to(t("titles.tos"), "#tos", :id => "tos_link", "data-target"=>"#tos", "data-toggle"=>"modal")).html_safe
   #user_sign_in_fields{:style => "display: none;"}
     %fieldset.control-group
       %label{:for => "user_password", :id => "user_password_label"}
@@ -65,5 +70,27 @@
 = render :partial => "sidebar/tos"
 :javascript
   $(function() {
-    $('#user_email').focus();
+    $('#user_email').focus();    
+    
+    
+    $(document).ready(function(){
+    
+      var tos_agreement_checkbox = function(){
+
+        if ($('#tos_agreement').is(':checked')) {
+          $('input[type="submit"]').removeAttr('disabled');      
+        } else {
+
+          $('input[type="submit"]').attr('disabled','disabled'); 
+        } 
+    
+      }
+
+      tos_agreement_checkbox();    
+      $('#tos_agreement').click(function(){
+        tos_agreement_checkbox();    
+      });    
+    });
+
+    
   });
