@@ -48,7 +48,7 @@
       = t("defaults.tos", :tos => link_to(t("titles.tos"), "#tos", :id => "tos_link", "data-target"=>"#tos", "data-toggle"=>"modal")).html_safe
 
     %fieldset.form-actions
-      = f.submit t("buttons.sign_up"), :class => "btn primary"
+      = f.submit t("buttons.sign_up"), :class => "btn primary", :id => "sign-up-button"
   #user_sign_in_fields{:style => "display: none;"}
     %fieldset.control-group
       %label{:for => "user_password", :id => "user_password_label"}
@@ -78,10 +78,10 @@
       var tos_agreement_checkbox = function(){
 
         if ($('#tos_agreement').is(':checked')) {
-          $('input[type="submit"]').removeAttr('disabled');      
+          $('#sign-up-button').removeAttr('disabled');      
         } else {
 
-          $('input[type="submit"]').attr('disabled','disabled'); 
+          $('#sign-up-button').attr('disabled','disabled'); 
         } 
     
       }
