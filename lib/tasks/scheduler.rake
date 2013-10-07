@@ -35,6 +35,10 @@ task :subscribe_recent_adopters, [:host, :api_key] => :environment do |t, args|
 			Rails.logger.info response.body
 			# ToDo: Examine response body and set subscribed_at only if we're sure the request succeeded
 			user.update_attributes(:subscribed_at => Time.current)
+      ThingMailer.send_city_notification
+
+      
+      
 		rescue
 			Rails.logger.error "Error subscribing #{user.email}"
 		end
