@@ -34,8 +34,8 @@ task :subscribe_recent_adopters, [:host, :api_key] => :environment do |t, args|
 			response = HTTParty.get(uri)
 			Rails.logger.info response.body
 			# ToDo: Examine response body and set subscribed_at only if we're sure the request succeeded
-      # user.update_attributes(:subscribed_at => Time.current)
-      ThingMailer.send_city_notification
+      user.update_attributes(:subscribed_at => Time.current)
+      ThingMailer.send_city_notification(user)
 
       
       

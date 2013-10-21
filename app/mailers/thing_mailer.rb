@@ -21,8 +21,8 @@ class ThingMailer < ActionMailer::Base
     
   end
   
-  def send_city_notification
-    mail(:to => ENV['ADMIN_SUBCRIPTION_NOTIFICATION_EMAIL'], :subject => "A drain has been adopted").deliver    
+  def send_city_notification (user)
+    mail(:to => ENV['ADMIN_SUBCRIPTION_NOTIFICATION_EMAIL'], :subject => "A drain has been adopted by #{user.email}").deliver    
   end  
 
 end
