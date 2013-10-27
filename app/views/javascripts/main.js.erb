@@ -44,7 +44,10 @@ function load() {
   var mapOptions = {
     center: center,
     disableDoubleClickZoom: false,
-    mapTypeControl: false,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      mapTypes: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE]
+    },
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     maxZoom: 19,
     minZoom: 16,
