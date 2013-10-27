@@ -21,11 +21,15 @@
         %a{:href => "http://www2.oaklandnet.com/"}
           = image_tag "logos/citytree_green_small.jpg", :width => '90px', :alt => t("sponsors.city"), :title => t("sponsors.city")
 
-
       #feedback
         %br
         %br
         %br
+        %p
+          To report a problem to the City of Oakland Public Works Agency, call 510-615-5566, email
+          %a{:href => URI.escape("mailto:pwacallcenter@oaklandnet.com")}pwacallcenter@oaklandnet.com
+          or visit
+          %a{:href => "http://www.seeclickfix.com/oakland"}www.seeclickfix.com/oakland.
         %p
           %a{:href => URI.escape("mailto:nneditch@oaklandnet.com?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} #{t("links.feedback").titleize}")}
             = t("links.feedback")
