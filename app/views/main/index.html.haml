@@ -1,12 +1,11 @@
 .table
   .table-row
     .table-cell.sidebar
-      %h2
+      %h1{:style => "margin-top:5px; margin-bottom: 0"}
         Adopt a Drain
-      %h5
-        Part of the 
+      %h4
+        Part of 
         %a{:href => 'http://www.oaklandadoptaspot.org'}Oakland Adopt a Spot
-        Program
 
       %p.alert-message.block-message#tagline
         = t("defaults.tagline")
@@ -27,12 +26,12 @@
         %br
         %br
         %p
-          To report a problem to the City of Oakland Public Works Agency, call 510-615-5566, email
-          %a{:href => URI.escape("mailto:pwacallcenter@oaklandnet.com")}pwacallcenter@oaklandnet.com
+          Report maintenance needs to the 
+          %a{:href => URI.escape("http://www2.oaklandnet.com/Government/o/PWA/Connect/ReportaProblem/index.htm")} City of Oakland Public Works Agency
           or visit
           %a{:href => "http://www.seeclickfix.com/oakland"}www.seeclickfix.com/oakland.
-        %p
-          %a{:href => URI.escape("mailto:mkelly2@oaklandnet.com?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} #{t("links.feedback").titleize}")}
+        %p{:style => "font-size: 120%"}
+          %a{:href => URI.escape("mailto:pboylerodriguez@oaklandnet.com?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} #{t("links.feedback").titleize}")}
             = t("links.feedback")
     .table-cell.map-container
       #map
