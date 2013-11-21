@@ -276,7 +276,10 @@ function load() {
 
   $('#address_form').live('submit', function() {
     var submitButton = $("#address_form input[type='submit']");
-    $(submitButton).attr("disabled", true);
+    // console.log('submit');
+    // $(submitButton).attr("disabled", true);
+    // console.log(($('#address').val()));
+    // console.log(($('#address').val() === ''));
     if($('#address').val() === '') {
       $(submitButton).attr("disabled", false);
       $('#address').parent().addClass('error');
