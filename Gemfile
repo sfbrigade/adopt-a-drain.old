@@ -14,6 +14,7 @@ gem 'rails_admin'
 gem 'validates_formatting_of'
 gem 'sendgrid', '~> 1.0.1'
 gem 'newrelic_rpm'
+gem 'google-v3-geocoder', '1.0.0'
 
 platforms :ruby_18 do
   gem 'fastercsv'
