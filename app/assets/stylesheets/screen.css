@@ -293,3 +293,9 @@ img.lock {
   opacity: 0.8;
   filter: alpha(opacity=80); /* For IE8 and earlier */
 }
+
+#legend{
+  background-color: white;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
