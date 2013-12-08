@@ -3,22 +3,40 @@ require 'open-uri'
 
 
 
-url = 'http://data.openoakland.org/storage/f/2012-11-01T014902/Inlets.csv'
+# url = '/Users/eddie/Downloads/drainswgs84.csv'
+# url = 'http://data.openoakland.org/storage/f/2012-11-01T014902/Inlets.csv'
+url = 'http://data.openoakland.org/en/storage/f/2013-12-08T214045/drainswgs84.csv'
 
-puts 'removing old things data'
-Thing.destroy_all
+# puts 'removing old things data'
+# Thing.destroy_all
 puts 'connecting'
 open(url) do |f|
   puts 'downloading'
   f.each_line do |l|
     CSV.parse(l) do |row|
-      city_id = row[0].to_i
-      lat = row[6].to_f.round(10)
-      long = row[7].to_f.round(10)
+      
+      if(row[0] == "OBJECTID_1")
+        next
+      else
+        city_id = row[0].to_i
+        lat = row[6].to_f
+        long = row[7].to_f
+        # puts "row) #{row}, city: #{city_id} #{long} #{lat} "        
 
-      if city_id > 1
-        puts "#{city_id} #{long} #{lat} "
-        Thing.create(:city_id =>  city_id, :lng => long, :lat=> lat)
+        if city_id > 1        
+          puts "#{city_id} #{long} #{lat}"
+        
+          drain = Thing.find_by_city_id( city_id ) 
+          if drain.nil?
+            Thing.new(:city_id => city_id)          
+            puts "create new"
+          else
+            updated = drain.update_attributes!(:lng => long, :lat=> lat)        
+            puts "updating #{updated}"          
+          end
+          
+        
+        end
       end
     end
   end 
