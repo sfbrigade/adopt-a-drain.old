@@ -32,7 +32,7 @@ en:
     thing: "drain"
     this_thing: "This %{thing}"
     tagline: "Volunteer to keep a drain clear and report any problems!"
-    tos: "By signing up you agree to the %{tos}."
+    tos: "By signing up you agree to the %{tos}"
     voice_number: "510-555-1212"
     zip: "94612"
   errors:
@@ -77,7 +77,7 @@ en:
     adopted: "%{thing_name} has been adopted"
     byline: "by %{name}"
     edit_profile: "Edit your Profile"
-    main: "Adopt-a-%{thing}"
+    main: "City of Oakland: Adopt-a-%{thing}"
     ofline: "of %{organization}"
     sign_in: "Sign in to adopt this %{thing}"
     thank_you: "Thank you for adopting this %{thing}!"
