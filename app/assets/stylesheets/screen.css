@@ -9,13 +9,12 @@ body {
 
 h1{
   font-size: 260%;  
-  margin-bottom: 0;
 }
 
 
 h1, h2 {
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0 0 10px;
 }
 
 h2 {
