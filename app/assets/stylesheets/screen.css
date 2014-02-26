@@ -7,6 +7,12 @@ body {
   margin: 0;
 }
 
+h1{
+  font-size: 260%;  
+  margin-bottom: 0;
+}
+
+
 h1, h2 {
   text-align: center;
   margin: 0 0 40px;
@@ -17,6 +23,9 @@ h2 {
   line-height: 30px;
   margin: 10px 0;
 }
+
+
+
 
 form.form-stacked {
   padding-left: 0;
