@@ -1,13 +1,13 @@
 .table
   .table-row
     .table-cell.sidebar
-      %a{:href => "http://www2.oaklandnet.com/"}
-        = image_tag "logos/citytree_green_small.jpg", :style => "margin-top:10px", :width => '90px', :alt => t("sponsors.city"), :title => t("sponsors.city")    
+      %a{:href => "http://codeforsanfrancisco.org/"}
+        = image_tag "https://pbs.twimg.com/profile_images/611647656331378688/Rf_FNiDA_200x200.jpg", :style => "margin-top:10px", :width => '90px', :alt => t("sponsors.city"), :title => t("sponsors.city")    
       %h1
         Adopt a Drain
       %h4
         Part of 
-        %a{:href => 'http://www.oaklandadoptaspot.org'}Oakland Adopt a Spot
+        %a{:href => '#'}San Francisco Adopt a Spot
 
       %p.alert-message.block-message#tagline
         = t("defaults.tagline")
@@ -18,8 +18,8 @@
         - else
           = render :partial => "sidebar/combo_form"
       #logos
-        %a{:href => "http://openoakland.org/"}
-          = image_tag "logos/openoakland.png", :width => '180px', :alt => t("sponsors.cfa"), :title => t("sponsors.cfa")
+        %a{:href => "http://codeforsanfrancisco.org/"}
+          = image_tag "https://pbs.twimg.com/profile_images/611647656331378688/Rf_FNiDA_200x200.jpg", :width => '180px', :alt => t("sponsors.cfa"), :title => t("sponsors.cfa")
 
       #feedback
         %br
@@ -27,9 +27,9 @@
         %br
         %p
           Report maintenance needs to the 
-          %a{:href => URI.escape("http://www2.oaklandnet.com/Government/o/PWA/Connect/ReportaProblem/index.htm")} City of Oakland Public Works Agency
+          %a{:href => URI.escape("#")} City of San Francisco Public Works Agency
           or visit
-          %a{:href => "http://www.seeclickfix.com/oakland"}www.seeclickfix.com/oakland
+          %a{:href => "http://seeclickfix.com/san-francisco"}seeclickfix.com/san-francisco
         %p{:style => "font-size: 120%"}
           %a{:href => URI.escape("mailto:pboylerodriguez@oaklandnet.com?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} #{t("links.feedback").titleize}")}
             = t("links.feedback")
