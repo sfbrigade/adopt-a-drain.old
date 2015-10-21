@@ -22,12 +22,12 @@ en:
     required: "(required)"
   defaults:
     address: "address"
-    address_1: "1 Frank H. Ogawa Plaza, Oakland, CA"
+    address_1: "San Francisco, CA"
     address_2: ""
     city: "Oakland"
-    city_state: "Oakland, California"
+    city_state: "San Francisco, California"
     neighborhood: "Downtown"
-    sms_number: "510-555-1212"
+    sms_number: ""
     state: "CA"
     thing: "drain"
     this_thing: "This %{thing}"
@@ -39,7 +39,7 @@ en:
     password: "You need to sign in or sign up before continuing."
     not_found: "Could not find %{thing}."
   labels:
-    address: "Enter an Oakland, CA address"
+    address: "Enter a San Francisco, CA address"
     address_1: "Address Line 1"
     address_2: "Address Line 2"
     city: "City"
@@ -84,7 +84,7 @@ en:
     tos: "Terms of Service & Volunteer Guidelines"
   sponsors:
     cfa: "Code for America"
-    city: "City of Oakland"
+    city: "City of San Francisco"
     mayor:
-      name: "Jean Quan"
+      name: ""
       title: "Mayor"
